@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+    <link rel="stylesheet" href="TestApp.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+    <div class="banner-up">
+        <button type="button" class="btn-back-banner" disabled>
+            <img src="images/previous.png" class="btn-back-img" alt="">
+        </button>
+        <span class="banner-text">Refer a friend and get $10 off! 🔥 Offer ends February 27!</span>
+        <button type="button" class="btn-next-banner">
+            <img src="images/next.png" class="btn-next-img" alt="">
+        </button>
+    </div>
+        <div class="cap">
+        <div class="cap-game-vendor">
+            <div class="geo-point">
+            <img src="images/point.png" class="point-img" alt="">
+                <span class="name-geo">Dublin, Republic of Ireland</span>
+            </div>
+            <div class="game-vendor">
+                <img src="images/game.png" class="cap-game-img" alt="">
+                <img src="images/vendor.png" class="cap-vendor-img" alt="">
+            </div>
+            <div class="cap-icons">
+                <button type="button" class="btn-magnifier"></button>
+                <button type="button" class="btn-account"></button>
+                <button type="button" class="btn-shop-cart"></button>
+            </div>
+        </div>
+        </div>
+        <div class="categories">
+                <button class="btn-discover">Discover</button>
+                <button class="btn-browse">Browse</button>
+                <button class="btn-store">Store</button>
+                <button class="btn-platforms">Platforms</button>
+                <button class="btn-releases">Releases</button>
+                <button class="btn-mobile">Mobile</button>
+                <button class="btn-articles">Articles</button>
+                <button class="btn-discover">Blog</button>
+                <button class="btn-blog">News</button>
+                <button class="btn-contacts">Contacts</button>
+        </div>
+    </header>
+    <div class="page">
+<div class="navigations">
+    <button type="button" class="btn-navigations-1">Home</button>
+    <img src="images/next-grey.png" class="next-img" alt="">
+    <button type="button" class="btn-navigations-2">Discover</button>
+    <img src="images/next-grey.png" class="next-img" alt="">
+    <button type="button" class="btn-navigations-3">Games</button>
+</div>
+<h1 class="navigations-name">Games</h1>
+<div class="main-banner">
+    <div class="banner-img">
+        <img src="images/mobile-banner.jpg" class="small-banner" alt="">
+        <img src="images/main-banner.jpg" class="big-banner" alt="">
+    <div class="main-banner-text">
+    <h2 class="main-banner-name">Refer a friends and get $10 off!</h2>
+    <span class="main-banner-description">Connect with friends. Refer a friend and unlock your $10 coupon! Offer ends February 27.</span>
+        <button type="button" class="btn-main-banner">Invite a friend</button>
+    </div>
+    </div>
+    <img src="images/main-characters.png" class="characters-img" alt="">
+</div>
+    <div class="selection">
+        <div class="search-bar">
+            <span class="search-text">Search for games</span>
+            <label>
+                <input class="search" type="search" placeholder="Search...">
+            </label>
+        </div>
+        <div class="category-bar">
+            <span class="search-text">Category</span>
+            <label>
+                <select class="category" id="cats" size="5" multiple onmousedown="viewDivClear()">
+                    <option id="1" value="1" onmousedown="viewDiv1()">Strategy</option>
+                    <option id="2" value="2" onmousedown="viewDiv2()">RPG</option>
+                    <option id="3" value="3" onmousedown="viewDiv3()">Action</option>
+                    <option id="4" value="4" onmousedown="viewDiv4()">Shooter</option>
+                    <option id="5" value="5" onmousedown="viewDiv5()">Card Game</option>
+                </select>
+            </label>
+        </div>
+        <div class="sort-bar">
+            <span class="search-text">Sort by</span>
+            <label>
+                <select class="sort">
+                    <option value="popular">Popular</option>
+                    <option value="new">New</option>
+                </select>
+            </label>
+        </div>
+        <div class="filters-bar">
+            <button type="button" class="btn-filters" onmousedown="viewAll()"><img src="images/filter.png" class="filters-img" alt="">Filters</button>
+        </div>
+    </div>
+        <div class="category-group" id="all-cats">
+            <button type="button" class="category-block" id="cat-div-1">Strategy
+                <img src="images/purple-cancel.png" class="close-btn-img" onclick="this.parentElement.style.display='none';" alt="">
+            </button>
+            <button type="button" class="category-block" id="cat-div-2">RPG
+                    <img src="images/purple-cancel.png" class="close-btn-img" onclick="this.parentElement.style.display='none';" alt="">
+            </button>
+            <button type="button" class="category-block" id="cat-div-3">Action
+                    <img src="images/purple-cancel.png" class="close-btn-img" onclick="this.parentElement.style.display='none';" alt="">
+            </button>
+            <button type="button" class="category-block" id="cat-div-4">Shooter
+                    <img src="images/purple-cancel.png" class="close-btn-img" onclick="this.parentElement.style.display='none';" alt="">
+            </button>
+            <button type="button" class="category-block" id="cat-div-5">Card&nbsp;Game
+                    <img src="images/purple-cancel.png" class="close-btn-img" onclick="this.parentElement.style.display='none';" alt="">
+            </button>
+            <button type="button" class="category-block" id="cat-div-clear" onclick="openbox(); return false">
+                Clear&nbsp;all
+            </button>
+        </div>
+        <div class="card-list">
+            <div class="add-card">
+                <span class="add-card-text">You can add a product card by clicking on the button</span>
+                <button type="button" onclick="addQuestion()" class="btn-add-card">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add card
+<!--                    <img src="images/white-plus.png" class="white-plus-img" alt="">Add card-->
+                </button>
+            </div>
+            <div class="card">
+                <div class="card-main">
+                    <a href="#" class="card-link">
+                        <img src="images/saints.svg" class="card-img" alt="">
+                <div class="card-information">
+                    <div class="card-category">
+                        <img src="images/action-rpg.svg" class="category-img" alt="">
+                    </div>
+                        <h3 class="card-title">Saints Row</h3>
+                    <div class="card-rate">
+                        <img src="images/star-empty.png" class="star" alt="">
+                        <img src="images/star-empty.png" class="star" alt="">
+                        <img src="images/star-empty.png" class="star" alt="">
+                        <img src="images/star-empty.png" class="star" alt="">
+                        <img src="images/star-empty.png" class="star" alt="">
+                        <span class="star-number">0</span>
+                    </div>
+                    <div class="card-description">
+                    <span>Platinum Edition</span>
+                    </div>
+                </div>
+                    </a>
+                </div>
+                <a href="#" class="card-link">
+                <div class="card-price">
+                    <div class="price">
+                        <span class="old-price">$1,299</span>
+                        <span class="actual-price">$649</span>
+                    </div>
+                    <div class="card-sale">
+                        <span>-50%</span>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="card">
+                <div class="card-main">
+                    <a href="#" class="card-link">
+                <img src="images/paladins.svg" class="card-img" alt="">
+                <div class="card-information">
+                    <div class="card-category">
+                        <img src="images/multiplayer-rpg.svg" class="category-img" alt="">
+                    </div>
+                    <h3 class="card-title">Paladins</h3>
+                    <div class="card-rate">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-empty.png" class="star" alt="">
+                        <span class="star-number">1,820</span>
+                    </div>
+                    <div class="card-description">
+                        <span>Get the Captain Price Operator included with purchase</span>
+                    </div>
+                </div>
+                    </a>
+                </div>
+                <a href="#" class="card-link">
+                <div class="card-price">
+                    <div class="price">
+                        <span class="actual-price">Free</span>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="card">
+                <div class="card-main">
+                    <a href="#" class="card-link">
+                <img src="images/far-cry.svg" class="card-img" alt="">
+                <div class="card-information">
+                    <div class="card-category">
+                        <img src="images/action.svg" class="category-img" alt="">
+                    </div>
+                    <h3 class="card-title">Far Cry 6</h3>
+                    <div class="card-rate">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-empty.png" class="star" alt="">
+                        <span class="star-number">2,888</span>
+                    </div>
+                    <div class="card-description">
+                        <span>In-Game Content</span>
+                    </div>
+                </div>
+                    </a>
+                </div>
+                <a href="#" class="card-link">
+                <div class="card-price">
+                    <div class="price">
+                        <span class="old-price">$1,299</span>
+                        <span class="actual-price">$649</span>
+                    </div>
+                    <div class="card-sale">
+                        <span>-50%</span>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="card">
+                <div class="card-main">
+                    <a href="#" class="card-link">
+                <img src="images/call-of-duty.svg" class="card-img" alt="">
+                <div class="card-information">
+                    <div class="card-category">
+                        <img src="images/shooter.svg" class="category-img" alt="">
+                    </div>
+                    <h3 class="card-title">Call of Duty: Warzone</h3>
+                    <div class="card-rate">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-empty.png" class="star" alt="">
+                        <img src="images/star-empty.png" class="star" alt="">
+                        <span class="star-number">18,982</span>
+                    </div>
+                    <div class="card-description">
+                        <span>Get the Captain Price Operator included with purchase</span>
+                    </div>
+                </div>
+                    </a>
+                </div>
+                <a href="#" class="card-link">
+                    <div class="card-price">
+                        <div class="price">
+                            <span class="old-price">$1,299</span>
+                            <span class="actual-price">$649</span>
+                        </div>
+                        <div class="card-sale">
+                            <span>-50%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <div class="card-main">
+                    <a href="#" class="card-link">
+                <img src="images/wow-shadow.svg" class="card-img" alt="">
+                <div class="card-information">
+                    <div class="card-category">
+                        <img src="images/action.svg" class="category-img" alt="">
+                    </div>
+                    <h3 class="card-title">World of Warcraft: Shadowlands</h3>
+                    <div class="card-rate">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-half.png" class="star" alt="">
+                        <img src="images/star-empty.png" class="star" alt="">
+                        <span class="star-number">299</span>
+                    </div>
+                    <div class="card-description">
+                        <span>Includes access to World of Warcraft, Burning Crusade Classic, and WoW Classic!</span>
+                    </div>
+                </div>
+                    </a>
+                </div>
+                <a href="#" class="card-link">
+                <div class="card-price">
+                    <div class="price">
+                        <span class="actual-price">Free</span>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="card">
+                <div class="card-main">
+                    <a href="#" class="card-link">
+                <img src="images/fortnite.svg" class="card-img" alt="">
+                <div class="card-information">
+                    <div class="card-category">
+                        <img src="images/shooter.svg" class="category-img" alt="">
+                    </div>
+                    <h3 class="card-title">Fortnite</h3>
+                    <div class="card-rate">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-half.png" class="star" alt="">
+                        <span class="star-number">9,199</span>
+                    </div>
+                    <div class="card-description">
+                        <span>Get the Captain Price Operator included with purchase</span>
+                    </div>
+                </div>
+                    </a>
+                </div>
+                <a href="#" class="card-link">
+                <div class="card-price">
+                    <div class="price">
+                        <span class="old-price">$1,299</span>
+                        <span class="actual-price">$649</span>
+                    </div>
+                    <div class="card-sale">
+                        <span>-50%</span>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="card">
+                <div class="card-main">
+                    <a href="#" class="card-link">
+                <img src="images/horizon.svg" class="card-img" alt="">
+                <div class="card-information">
+                    <div class="card-category">
+                        <img src="images/action-rpg.svg" class="category-img" alt="">
+                    </div>
+                    <h3 class="card-title">Horizon: Forbidden West</h3>
+                    <div class="card-rate">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-half.png" class="star" alt="">
+                        <span class="star-number">9,199</span>
+                    </div>
+                    <div class="card-description">
+                        <span>Platinum Edition</span>
+                    </div>
+                </div>
+                    </a>
+                </div>
+                <a href="#" class="card-link">
+                    <div class="card-price">
+                        <div class="price">
+                            <span class="old-price">$1,299</span>
+                            <span class="actual-price">$649</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <div class="card-main">
+                    <a href="#" class="card-link">
+                <img src="images/nfs-heat.svg" class="card-img" alt="">
+                <div class="card-information">
+                    <div class="card-category">
+                        <img src="images/action.svg" class="category-img" alt="">
+                    </div>
+                    <h3 class="card-title">Need for Speed: Heat</h3>
+                    <div class="card-rate">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-half.png" class="star" alt="">
+                        <span class="star-number">2,911</span>
+                    </div>
+                    <div class="card-description">
+                        <span>Includes access to World of Warcraft, Burning Crusade Classic, and WoW Classic!</span>
+                    </div>
+                </div>
+                    </a>
+                </div>
+                <a href="#" class="card-link">
+                    <div class="card-price">
+                        <div class="price">
+                            <span class="actual-price">$649</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <div class="card-main">
+                    <a href="#" class="card-link">
+                <img src="images/spider-man-miles.svg" class="card-img" alt="">
+                <div class="card-information">
+                    <div class="card-category">
+                        <img src="images/action.svg" class="category-img" alt="">
+                    </div>
+                    <h3 class="card-title">Spider-Man: Miles Morales</h3>
+                    <div class="card-rate">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-empty.png" class="star" alt="">
+                        <img src="images/star-empty.png" class="star" alt="">
+                        <span class="star-number">920</span>
+                    </div>
+                    <div class="card-description">
+                        <span>Get the Captain Price Operator included with purchase</span>
+                    </div>
+                </div>
+                    </a>
+                </div>
+                <a href="#" class="card-link">
+                    <div class="card-price">
+                        <div class="price">
+                            <span class="old-price">$1,299</span>
+                            <span class="actual-price">$649</span>
+                        </div>
+                        <div class="card-sale">
+                            <span>-50%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <div class="card-main">
+                    <a href="#" class="card-link">
+                <img src="images/witcher-3.svg" class="card-img" alt="">
+                <div class="card-information">
+                    <div class="card-category">
+                        <img src="images/card-game.svg" class="category-img" alt="">
+                    </div>
+                    <h3 class="card-title">Witcher 3: Wild Hunt</h3>
+                    <div class="card-rate">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <span class="star-number">299,890</span>
+                    </div>
+                    <div class="card-description">
+                        <span>Will only be usable in the new Classic Format when it is released</span>
+                    </div>
+                </div>
+                    </a>
+                </div>
+                <a href="#" class="card-link">
+                    <div class="card-price">
+                        <div class="price">
+                            <span class="old-price">$1,299</span>
+                            <span class="actual-price">$649</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <div class="card-main">
+                    <a href="#" class="card-link">
+                <img src="images/marvel-guardians.svg" class="card-img" alt="">
+                <div class="card-information">
+                    <div class="card-category">
+                        <img src="images/shooter.svg" class="category-img" alt="">
+                    </div>
+                    <h3 class="card-title">Guardians of the Galaxy</h3>
+                    <div class="card-rate">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-empty.png" class="star" alt="">
+                        <img src="images/star-empty.png" class="star" alt="">
+                        <span class="star-number">29</span>
+                    </div>
+                    <div class="card-description">
+                        <span>In-Game Content</span>
+                    </div>
+                </div>
+                    </a>
+                </div>
+                <a href="#" class="card-link">
+                    <div class="card-price">
+                        <div class="price">
+                            <span class="old-price">$1,299</span>
+                            <span class="actual-price">$649</span>
+                        </div>
+                        <div class="card-sale">
+                            <span>-50%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <div class="card-main">
+                    <a href="#" class="card-link">
+                <img src="images/crash-team-racing.svg" class="card-img" alt="">
+                <div class="card-information">
+                    <div class="card-category">
+                        <img src="images/shooter.svg" class="category-img" alt="">
+                    </div>
+                    <h3 class="card-title">Crash Team Racing</h3>
+                    <div class="card-rate">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-half.png" class="star" alt="">
+                        <img src="images/star-empty.png" class="star" alt="">
+                        <span class="star-number">9,199</span>
+                    </div>
+                    <div class="card-description">
+                        <span>Get the Captain Price Operator included with purchase</span>
+                    </div>
+                </div>
+                    </a>
+                </div>
+                <a href="#" class="card-link">
+                    <div class="card-price">
+                        <div class="price">
+                            <span class="old-price">$1,299</span>
+                            <span class="actual-price">$649</span>
+                        </div>
+                        <div class="card-sale">
+                            <span>-50%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <div class="card-main">
+                    <a href="#" class="card-link">
+                <img src="images/spider-man-classic.svg" class="card-img" alt="">
+                <div class="card-information">
+                    <div class="card-category">
+                        <img src="images/multiplayer-rpg.svg" class="category-img" alt="">
+                    </div>
+                    <h3 class="card-title">Spider-Man</h3>
+                    <div class="card-rate">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-full.png" class="star" alt="">
+                        <img src="images/star-half.png" class="star" alt="">
+                        <img src="images/star-empty.png" class="star" alt="">
+                        <span class="star-number">9,199</span>
+                    </div>
+                    <div class="card-description">
+                        <span>Includes access to World of Warcraft, Burning Crusade Classic, and WoW Classic!</span>
+                    </div>
+                </div>
+                    </a>
+                </div>
+                <a href="#" class="card-link">
+                    <div class="card-price">
+                        <div class="price">
+                            <span class="actual-price">$649</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="empty-card">
+                <div class="card-main">
+                    <a href="#" class="card-link">
+                <img src="images/empty.svg" class="card-img" alt="">
+                <div class="card-information">
+                    <div class="card-category">
+                        <img src="images/action-rpg.svg" class="category-img" alt="">
+                    </div>
+                    <h3 class="card-title">Dragon Age 5</h3>
+                    <div class="card-rate">
+                        <img src="images/star-empty.png" class="star" alt="">
+                        <img src="images/star-empty.png" class="star" alt="">
+                        <img src="images/star-empty.png" class="star" alt="">
+                        <img src="images/star-empty.png" class="star" alt="">
+                        <img src="images/star-empty.png" class="star" alt="">
+                        <span class="star-number">0</span>
+                    </div>
+                    <div class="card-description">
+                        <span>Non released</span>
+                    </div>
+                </div>
+                    </a>
+                </div>
+                <a href="#" class="card-link">
+                <div class="card-price"></div>
+                </a>
+            </div>
+            <div id="parentId" class="new-card"></div>
+        </div>
+        <button type="button" class="btn-show-more">Show more</button>
+        <div class="pagination">
+                <button class="page-block">
+                    <img src="images/previous-grey.png" class="btn-back-img" alt="">
+                </button>
+                <button class="page-block">1</button>
+                <button class="page-block">2</button>
+                <button class="page-block">3</button>
+                <button class="page-block">4</button>
+                <button class="page-block">5</button>
+                <button class="page-block-dots">
+            <div class="page-dots">...</div>
+                </button>
+                <button class="page-block">99</button>
+                <button class="page-block">
+                    <img src="images/next-black.png" class="btn-next-img" alt="">
+                </button>
+        </div>
+        <div class="questions-block">
+            <div class="quest-text-block">
+        <h2 class="quest-title">Frequently asked questions</h2>
+            <span class="quest-text">Everything you need to know about the games.</span>
+            </div>
+            <div class="quest-list">
+                <details>
+                    <summary class="quest">How does work?</summary>
+                    <div class="text-box">
+                        <p class="quest-text">A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback. This feedback is shown on a video display device, such as a TV set, monitor, touchscreen, or virtual reality headset. A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback. This feedback is shown on a video display device, such as a TV set, monitor, touchscreen, or virtual reality headset.</p>
+                        <ul>
+                            <li><span class="quest-text">motion sensing device,</span></li>
+                            <li><span class="quest-text">controller,</span></li>
+                            <li><span class="quest-text">keyboard,</span></li>
+                            <li><span class="quest-text">joystick.</span></li>
+                        </ul>
+                        <p class="small-text">Visual feedback.</p>
+                        <p class="quest-text">A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback.</p>
+                    </div>
+                </details>
+                <details>
+                    <summary class="quest">What is a game?</summary>
+                    <div class="text-box">
+                        <p class="quest-text">A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback. This feedback is shown on a video display device, such as a TV set, monitor, touchscreen, or virtual reality headset. A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback. This feedback is shown on a video display device, such as a TV set, monitor, touchscreen, or virtual reality headset.</p>
+                        <ul>
+                            <li><span class="quest-text">motion sensing device,</span></li>
+                            <li><span class="quest-text">controller,</span></li>
+                            <li><span class="quest-text">keyboard,</span></li>
+                            <li><span class="quest-text">joystick.</span></li>
+                        </ul>
+                        <p class="small-text">Visual feedback.</p>
+                        <p class="quest-text">A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback.</p>
+                    </div>
+                </details>
+                <details>
+                    <summary class="quest">Is there a free trial available?</summary>
+                    <div class="text-box">
+                        <p class="quest-text">A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback. This feedback is shown on a video display device, such as a TV set, monitor, touchscreen, or virtual reality headset. A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback. This feedback is shown on a video display device, such as a TV set, monitor, touchscreen, or virtual reality headset.</p>
+                        <ul>
+                            <li><span class="quest-text">motion sensing device,</span></li>
+                            <li><span class="quest-text">controller,</span></li>
+                            <li><span class="quest-text">keyboard,</span></li>
+                            <li><span class="quest-text">joystick.</span></li>
+                        </ul>
+                        <p class="small-text">Visual feedback.</p>
+                        <p class="quest-text">A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback.</p>
+                    </div>
+                </details>
+                <details>
+                    <summary class="quest">How does billing work?</summary>
+                    <div class="text-box">
+                        <p class="quest-text">A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback. This feedback is shown on a video display device, such as a TV set, monitor, touchscreen, or virtual reality headset. A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback. This feedback is shown on a video display device, such as a TV set, monitor, touchscreen, or virtual reality headset.</p>
+                        <ul>
+                            <li><span class="quest-text">motion sensing device,</span></li>
+                            <li><span class="quest-text">controller,</span></li>
+                            <li><span class="quest-text">keyboard,</span></li>
+                            <li><span class="quest-text">joystick.</span></li>
+                        </ul>
+                        <p class="small-text">Visual feedback.</p>
+                        <p class="quest-text">A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-join">
+        <div class="join-text-up">
+            <span class="join-text">Join our newsletter</span>
+            <span class="quest-text">We’ll send you a nice letter one per week. No spam.</span>
+        </div>
+            <div class="join-btn-box">
+                <label>
+                    <input class="e-mail" type="search" placeholder="Enter e-mail">
+                </label>
+                <button type="button" class="btn-subscribe">Subscribe</button>
+            </div>
+        </div>
+        <div class="footer-navigation">
+            <div class="foot-category-block">
+                <span class="foot-title-text">Categories</span>
+                <button type="button" class="btn-foot-category">Strategy</button>
+                <button type="button" class="btn-foot-category">Action</button>
+                <button type="button" class="btn-foot-category">Shooter</button>
+                <button type="button" class="btn-foot-category">Card Game</button>
+                <button type="button" class="btn-foot-category">Simulator</button>
+                <button type="button" class="btn-foot-category">RPG</button>
+                <button type="button" class="btn-foot-category">Multiplayer</button>
+            </div>
+            <div class="foot-category-block">
+                <span class="foot-title-text">Company</span>
+                <button type="button" class="btn-foot-category">About us</button>
+                <button type="button" class="btn-foot-category">Careers</button>
+                <button type="button" class="btn-foot-category">Press</button>
+                <button type="button" class="btn-foot-category">News</button>
+                <button type="button" class="btn-foot-category">Contact</button>
+            </div>
+            <div class="foot-category-block">
+                <span class="foot-title-text">Legal</span>
+                <button type="button" class="btn-foot-category">Terms</button>
+                <button type="button" class="btn-foot-category">Privacy</button>
+                <button type="button" class="btn-foot-category">Cookies</button>
+                <button type="button" class="btn-foot-category">Licenses</button>
+                <button type="button" class="btn-foot-category">Settings</button>
+            </div>
+            <div class="foot-category-block">
+                <span class="foot-title-text">Internet</span>
+                <button type="button" class="btn-foot-category">Twitter</button>
+                <button type="button" class="btn-foot-category">Facebook</button>
+                <button type="button" class="btn-foot-category">Dribbble</button>
+                <button type="button" class="btn-foot-category">GitHub</button>
+            </div>
+        </div>
+        <span class="foot-description">Copyright © GameVendor, 2022</span>
+    </div>
+    <div class="nav-panel">
+        <a href="#" class="btn-nav-panel-1"><span>Home</span></a>
+        <a href="#" class="btn-nav-panel-2">Browse</a>
+        <a href="#" class="btn-nav-panel-3">Search</a>
+        <a href="#" class="btn-nav-panel-4">Account</a>
+        <a href="#" class="btn-nav-panel-5">Cart</a>
+    </div>
+        <script src="TestApp.js"></script>
+</body>
+</html>
